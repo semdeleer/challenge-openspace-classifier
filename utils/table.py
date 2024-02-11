@@ -1,6 +1,10 @@
 class Seat:
     """
      Seat class: Gives back if the seat on the table is occupied or not
+     param: The name of the occupand of the seat
+
+     set_occupant: sets the occupont on a empty seat
+     remove_occupant: removes the occupant from a seat
     """
 
     def __init__(self, name) -> None:
