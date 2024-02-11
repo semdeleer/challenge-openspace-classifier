@@ -1,25 +1,25 @@
 class Seat:
     """
-     Seat class: Gives back if the seat on the table is occupatied or not
+     Seat class: Gives back if the seat on the table is occupied or not
     """
 
     def __init__(self, name) -> None:
-        self.free = False
+        self.free = True
         self.occupant = ""
         self.name = name
 
     def set_occupant(self, name):
-        if self.free == False:
-            self.free = True
+        if self.free:
+            self.free = False
             self.occupant = name
 
     def remove_occupant(self):
-        self.free = False
-        return f"The occupant was{self.occupant}"
+        self.free = True
+        return f"The occupant was {self.occupant}"
 
     def __str__(self) -> str:
-        return f"The seat is {self.free} and if its not free the occupant is {self.name}"
-    
+        return f"The seat is {self.free} and if it's not free, the occupant is {self.occupant}"
+
 
 class Table:
     """
@@ -28,26 +28,35 @@ class Table:
 
     def __init__(self, capacity) -> None:
         self.capacity = capacity
-        self.size = [None] * self.capacity
+        self.seats = [Seat(f"Seat {i+1}") for i in range(self.capacity)]
 
     def has_free_spot(self):
-        for i in self.size:
-            if i == None:
+        for seat in self.seats:
+            if seat.free:
                 return True
-            return False
+        return False
 
     def assign_seat(self, name):
-        if self.has_free_spot(self) == True:
-            for i in self.size:
-                if i == None:
-                    self.size[i] = name
-    
+        for seat in self.seats:
+            if seat.free:
+                seat.set_occupant(name)
+                return f"{name} assigned to {seat.name}"
+        return f"No available seats for {name}"
+
     def left_capacity(self):
         count = 0
-        for i in self.size:
-            if i == None:
+        for seat in self.seats:
+            if seat.free:
                 count += 1
         return count
 
+# Create a Table with an initial capacity of 4
+table = Table(4)
 
-        
+# Assign John to the table
+result = table.assign_seat("John")
+print(result)
+
+# Check the left capacity of the table
+left_capacity = table.left_capacity()
+print(f"Table has {left_capacity} free seats.")
