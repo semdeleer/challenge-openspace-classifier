@@ -2,7 +2,7 @@ import csv
 from utils.openspace import Openspace
 
 
-csv_file_path = r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier/new_colleagues.csv"
+csv_file_path = r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier/lesColl.csv"
 names_list = []
 
 with open(csv_file_path, 'r', newline='') as csvfile:

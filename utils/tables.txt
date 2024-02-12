@@ -1,30 +1,30 @@
 Table1 
-Seat Seat 1 - Occupant: Afaf 
-Seat Seat 2 - Occupant: Caroline 
+Seat Seat 1 - Occupant: Em 
+Seat Seat 2 - Occupant: Andrea 
 Seat Seat 3 - Occupant: Gerrit 
-Seat Seat 4 - Occupant: Nasrin 
-Table2 
-Seat Seat 1 - Occupant: Alexander 
-Seat Seat 2 - Occupant: Danil 
-Seat Seat 3 - Occupant: Ivan  
 Seat Seat 4 - Occupant: Nathalie 
-Table3 
-Seat Seat 1 - Occupant: Alfiya 
-Seat Seat 2 - Occupant: Daryoush 
-Seat Seat 3 - Occupant: Jens 
-Seat Seat 4 - Occupant: Niels 
-Table4 
-Seat Seat 1 - Occupant: Alice 
-Seat Seat 2 - Occupant: Em 
-Seat Seat 3 - Occupant: Karel 
-Seat Seat 4 - Occupant: Sweta 
-Table5 
-Seat Seat 1 - Occupant: Andrea 
-Seat Seat 2 - Occupant: Fabienne 
-Seat Seat 3 - Occupant: Mahsa 
-Seat Seat 4 - Occupant: Viktor 
-Table6 
-Seat Seat 1 - Occupant: Ariana 
+Table2 
+Seat Seat 1 - Occupant: Viktor 
 Seat Seat 2 - Occupant: Geraldine 
+Seat Seat 3 - Occupant: Ariana 
+Seat Seat 4 - Occupant: Fabienne 
+Table3 
+Seat Seat 1 - Occupant: Afaf 
+Seat Seat 2 - Occupant: Ivan  
+Seat Seat 3 - Occupant: Alexander 
+Seat Seat 4 - Occupant: Danil 
+Table4 
+Seat Seat 1 - Occupant: Sweta 
+Seat Seat 2 - Occupant: Mahsa 
+Seat Seat 3 - Occupant: Alfiya 
+Seat Seat 4 - Occupant: Jens 
+Table5 
+Seat Seat 1 - Occupant: Nasrin 
+Seat Seat 2 - Occupant: Alice 
+Seat Seat 3 - Occupant: Niels 
+Seat Seat 4 - Occupant: Karel 
+Table6 
+Seat Seat 1 - Occupant: Caroline 
+Seat Seat 2 - Occupant: Daryoush 
 Seat Seat 3 - Occupant: Miguel 
-Seat Seat 4 - Occupant: Yanina 
+Seat Seat 4 - Unoccupied

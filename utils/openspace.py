@@ -1,7 +1,20 @@
+from random import shuffle
 from utils.table import Table
 class Openspace:
     """
-    Class Openspace:
+    Class Openspace represents an open space with multiple tables where individuals can be organized into seats.
+
+    Attributes:
+    - number_of_tables (int): The total number of tables in the openspace.
+    - tables (list): A list of Table objects representing each table in the openspace.
+
+    Methods:
+    - __init__(self, number_of_tables, capacity_per_table): Initializes an Openspace instance with the given number of tables
+      and the specified capacity per table.
+    - organize(self, names): Organizes a list of names into seats at the tables, considering the capacity of each table.
+    - display(self): Displays the current seating arrangement at each table, showing occupied and unoccupied seats.
+    - store(self, filename): Stores the current seating arrangement in a file with the specified filename.
+
     """
 
     def __init__(self, number_of_tables, capacity_per_table) -> None:
@@ -9,16 +22,21 @@ class Openspace:
        self.tables = [Table(capacity_per_table) for _ in range(number_of_tables)]
 
     def organize(self, names):
+        shuffle(names)
+        unassigned_names = []
         current_table = 0
         for name in names:
             while not self.tables[current_table].has_free_spot():
                 current_table += 1
                 if current_table == self.number_of_tables:
-                    current_table = 0  # Reset to the beginning if reached the end
-            self.tables[current_table].assign_seat(name)
+                    unassigned_names.append(name)
+                    break
+            else:
+                self.tables[current_table].assign_seat(name)
+
             current_table += 1
             if current_table == self.number_of_tables:
-                current_table = 0  # Reset to the beginning if reached the end
+                current_table = 0
 
     def display(self):
         for i, table in enumerate(self.tables):
