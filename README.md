@@ -31,27 +31,45 @@ Import a file containing a list of occupant names and incorporate it into the ma
 
 
 ### Class Table
-- Attributes
--- capacity (int): The maximum number of seats available at the table.
--- seats (list): A list of Seat objects representing each seat at the table.
+<ul>
+    <li><strong>Attributes:</strong></li>
+    <ul>
+        <li><code>capacity</code> (int): The maximum number of seats available at the table.</li>
+        <li><code>seats</code> (list): A list of Seat objects representing each seat at the table.</li>
+    </ul>
+</ul>
 
--Methods
--- __init__(self, capacity): Initializes a Table instance.
--- has_free_spot(self): Checks if there is at least one unoccupied seat at the table.
--- assign_seat(self, name): Assigns a name to the first available unoccupied seat at the table.
--- left_capacity(self): Returns the number of unoccupied seats at the table.
+<ul>
+    <li><strong>Methods:</strong></li>
+    <ul>
+        <li><code>__init__(self, capacity)</code>: Initializes a Table instance.</li>
+        <li><code>has_free_spot(self)</code>: Checks if there is at least one unoccupied seat at the table.</li>
+        <li><code>assign_seat(self, name)</code>: Assigns a name to the first available unoccupied seat at the table.</li>
+        <li><code>left_capacity(self)</code>: Returns the number of unoccupied seats at the table.</li>
+    </ul>
+</ul>
+
 
 ### Class Seat
-- Attributes
--- name  (str): The name of the occupant
--- occupant (str): empty string
--- free (bool): A boolean to see of a seat is empty
+<ul>
+    <li><strong>Attributes:</strong></li>
+    <ul>
+        <li><code>name</code> (str): The name of the occupant.</li>
+        <li><code>occupant</code> (str): Empty string.</li>
+        <li><code>free</code> (bool): A boolean to indicate if a seat is empty.</li>
+    </ul>
+</ul>
 
--Methods
--- __init__(self, name): Initializes a Table instance.
--- set_occupant(self, name): changes the free to False and add the name to the occupant
--- remove_occupant(self): Removes the occupeant from a seat and changes the free attribute back to True
--- __str__(self): return if the seat is taken and if so who is in that seat
+<ul>
+    <li><strong>Methods:</strong></li>
+    <ul>
+        <li><code>__init__(self, name)</code>: Initializes a Seat instance.</li>
+        <li><code>set_occupant(self, name)</code>: Changes the <code>free</code> attribute to False and adds the <code>name</code> to the <code>occupant</code>.</li>
+        <li><code>remove_occupant(self)</code>: Removes the occupant from a seat and changes the <code>free</code> attribute back to True.</li>
+        <li><code>__str__(self)</code>: Returns if the seat is taken and if so, who is in that seat.</li>
+    </ul>
+</ul>
+
 
 ## Usage
 tables_becode = Openspace(6, 4)
