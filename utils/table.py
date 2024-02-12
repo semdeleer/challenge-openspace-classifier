@@ -55,12 +55,12 @@ class Table:
         return count
 
 # Create a Table with an initial capacity of 4
-table = Table(4)
+#table = Table(4)
 
 # Assign John to the table
-result = table.assign_seat("John")
-print(result)
+#result = table.assign_seat("John")
+#print(result)
 
 # Check the left capacity of the table
-left_capacity = table.left_capacity()
-print(f"Table has {left_capacity} free seats.")
+#left_capacity = table.left_capacity()
+#print(f"Table has {left_capacity} free seats.")
