@@ -59,7 +59,9 @@ class Table:
 
 # Assign John to the table
 #result = table.assign_seat("John")
+#result1 = table.assign_seat("Mary")
 #print(result)
+#print(result1)
 
 # Check the left capacity of the table
 #left_capacity = table.left_capacity()

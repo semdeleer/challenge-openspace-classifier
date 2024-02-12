@@ -12,7 +12,11 @@ with open(csv_file_path, 'r', newline='') as csvfile:
         name = row[0]
         names_list.append(name)
 
-print(names_list)
 
 
 
+
+tables_becode = Openspace(6, 4)
+tables_becode.organize(names_list)
+tables_becode.display()
+tables_becode.store(r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier\utils\tables.txt")

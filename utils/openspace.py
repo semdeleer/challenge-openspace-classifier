@@ -1,4 +1,4 @@
-from .table import Table
+from utils.table import Table
 class Openspace:
     """
     Class Openspace:
@@ -9,24 +9,21 @@ class Openspace:
        self.tables = [Table(capacity_per_table) for _ in range(number_of_tables)]
 
     def organize(self, names):
-
         current_table = 0
         for name in names:
-            while current_table < self.number_of_tables and not self.tables[current_table].has_free_spot():
-                current_table += 1
-            
-            if current_table == self.number_of_tables:
-                print(f"No avaible seats for {name}")
-                break
+            while not self.tables[current_table].has_free_spot():
+                current_table = (current_table + 1) % self.number_of_tables  # Wrap around
+            self.tables[current_table].assign_seat(name)
+            current_table = (current_table + 1) % self.number_of_tables  # Move to the next table
 
-        result = self.tables[current_table].assign_seat(name)
-        print(result)
-    
     def display(self):
         for i, table in enumerate(self.tables):
             print(f"Table {i + 1}")
             for seat in table.seats:
-                print(f"{seat}")
+                if not seat.free:
+                    print(f"Seat {seat.name} - Occupant: {seat.occupant}")
+                else:
+                    print(f"Seat {seat.name} - Unoccupied")
 
     def store(self, filename):
         new_tablefile = filename
@@ -34,6 +31,17 @@ class Openspace:
         for i, table in enumerate(self.tables):
             file.write(f"Table{i + 1} \n")
             for seat in table.seats:
-                file.write(f"Seat {seat}")
+                if not seat.free:
+                    file.write(f"Seat {seat.name} - Occupant: {seat.occupant} \n")
+                else:
+                    file.write(f"Seat {seat.name} - Unoccupied\n")
         file.close()
+
+
+#name_list = ["Jhon", "Mandel", "Rick", "Dany"]
+
+#tables = Openspace(2, 2)
+#tables.organize(name_list)
+#tables.display()
+
 
