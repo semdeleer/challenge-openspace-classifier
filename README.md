@@ -11,15 +11,24 @@ Import a file containing a list of occupant names and incorporate it into the ma
 ## Classes
 
 ### Openspace Class
-- Attributes
--- number_of_tables (int): The total number of tables in the openspace.
--- tables (list): A list of Table objects representing each table in the openspace.
+<ul>
+    <li><strong>Attributes:</strong></li>
+    <ul>
+        <li><code>number_of_tables</code> (int): The total number of tables in the openspace.</li>
+        <li><code>tables</code> (list): A list of Table objects representing each table in the openspace.</li>
+    </ul>
+</ul>
 
--Methods
--- __init__(self, number_of_tables, capacity_per_table): Initializes an Openspace instance.
--- organize(self, names): Organizes a list of names into seats at the tables.
--- display(self): Displays the current seating arrangement at each table.
--- store(self, filename): Stores the current seating arrangement in a file.
+<ul>
+    <li><strong>Methods:</strong></li>
+    <ul>
+        <li><code>__init__(self, number_of_tables, capacity_per_table)</code>: Initializes an Openspace instance.</li>
+        <li><code>organize(self, names)</code>: Organizes a list of names into seats at the tables.</li>
+        <li><code>display(self)</code>: Displays the current seating arrangement at each table.</li>
+        <li><code>store(self, filename)</code>: Stores the current seating arrangement in a file.</li>
+    </ul>
+</ul>
+
 
 ### Class Table
 - Attributes
