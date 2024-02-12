@@ -2,7 +2,7 @@ import csv
 from utils.openspace import Openspace
 
 
-csv_file_path = r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier/lesColl.csv"
+csv_file_path = r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier/new_colleagues1.csv"
 names_list = []
 
 with open(csv_file_path, 'r', newline='') as csvfile:
@@ -13,7 +13,7 @@ with open(csv_file_path, 'r', newline='') as csvfile:
         names_list.append(name)
 
 
-r
+
 
 
 tables_becode = Openspace(6, 4)
