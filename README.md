@@ -10,7 +10,7 @@ Import a file containing a list of occupant names and incorporate it into the ma
 
 ## Classes
 
-### Openspace Class
+### Class Openspace
 <ul>
     <li><strong>Attributes:</strong></li>
     <ul>
