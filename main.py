@@ -1,6 +1,6 @@
 import csv
 from utils.openspace import Openspace
-from utils.table import Table
+
 
 csv_file_path = r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier/new_colleagues.csv"
 names_list = []

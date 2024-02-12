@@ -12,9 +12,13 @@ class Openspace:
         current_table = 0
         for name in names:
             while not self.tables[current_table].has_free_spot():
-                current_table = (current_table + 1) % self.number_of_tables  # Wrap around
+                current_table += 1
+                if current_table == self.number_of_tables:
+                    current_table = 0  # Reset to the beginning if reached the end
             self.tables[current_table].assign_seat(name)
-            current_table = (current_table + 1) % self.number_of_tables  # Move to the next table
+            current_table += 1
+            if current_table == self.number_of_tables:
+                current_table = 0  # Reset to the beginning if reached the end
 
     def display(self):
         for i, table in enumerate(self.tables):
