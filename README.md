@@ -72,7 +72,7 @@ Import a file containing a list of occupant names and incorporate it into the ma
 
 
 ## Usage
-tables_becode = Openspace(6, 4)
-tables_becode.organize(names_list)
-tables_becode.display()
-tables_becode.store(r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier\utils\tables.txt")
+<code>tables_becode = Openspace(6, 4)</code>
+<code>tables_becode.organize(names_list)</code>
+<code>tables_becode.display()</code>
+<code>tables_becode.store(r"C:\Users\semde\BeCodeH\Projects\Project1\challenge-openspace-classifier\utils\tables.txt")</code>
